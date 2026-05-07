@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eco Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <span class="nav-brand"> Eco Dashboard</span>
+    <div class="nav-links">
+      <a href="index.html" class="nav-btn active">Home</a>
+      <a href="about.html" class="nav-btn">About Us</a>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <h1> Eco Analytics Dashboard</h1>
+    <p class="subtitle">Track your daily environment impact</p>
+
+    <div class="cards">
+
+      <div class="card">
+        <p class="card-label">⚡ Electricity</p>
+        <p class="card-value" id="elec-display">0</p>
+        <p class="card-unit">kWh</p>
+      </div>
+
+      <div class="card">
+        <p class="card-label">💧 Water</p>
+        <p class="card-value" id="water-display">0</p>
+        <p class="card-unit">Liters</p>
+      </div>
+
+      <div class="card">
+        <p class="card-label">🌍 Carbon</p>
+        <p class="card-value" id="carbon-display">0</p>
+        <p class="card-unit">kg CO₂</p>
+      </div>
+
+    </div>
+
+    <div class="box">
+      <h2> Enter Today's Usage</h2>
+
+      <label>Electricity used (kWh)</label>
+      <input type="number" id="inp-elec" placeholder="e.g. 120">
+
+      <label>Water used (Liters)</label>
+      <input type="number" id="inp-water" placeholder="e.g. 80">
+
+      <button id="calc-btn">Calculate</button>
+
+      <p class="formula">Formula: Carbon = Electricity * 0.85 + Water * 0.001</p>
+
+      <p id="status-msg"></p>
+    </div>
+
+    <div class="box">
+      <h2> Today's Summary</h2>
+      <p id="daily-summary">No data yet. Enter your usage above.</p>
+    </div>
+
+    <div class="box">
+      <h2> Weekly Log</h2>
+      <p class="note">Each time you click Calculate, a new entry is added below.</p>
+      <div id="weekly-log">
+        <p>No entries yet.</p>  
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
